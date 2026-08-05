@@ -1,4 +1,4 @@
-# 🌟 DIN Protocol Proposals (DPPs)
+# DIN Protocol Proposals (DPPs)
 
 ## Welcome to the DPP Hub!
 

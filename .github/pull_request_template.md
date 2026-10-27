@@ -1,12 +1,12 @@
 ## What does this PR do?
 
-<!-- For example: adds DPP-<number> as a Draft, or moves DPP-<number> to Review. -->
+<!-- For example: adds IZP-<number> as a Draft, or moves IZP-<number> to Review. -->
 
-**DPP:** DPP-<number>
+**IZP:** IZP-<number>
 **Discussion issue:** #<!-- issue number -->
 
 ## Checklist
 
-- [ ] The DPP follows the template in the README.
-- [ ] The DPP Index is updated.
-- [ ] A discussion issue is open and linked in the DPP's Discussions-To field.
+- [ ] The IZP follows the template in the README.
+- [ ] The IZP Index is updated.
+- [ ] A discussion issue is open and linked in the IZP's Discussions-To field.

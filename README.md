@@ -1,123 +1,124 @@
 # DIN Protocol Proposals (DPPs)
 
-## Welcome to the DPP Hub!
+DIN Protocol Proposals (DPPs) are how changes to the Decentralized Intelligence Network (DIN) are proposed, discussed and agreed. A DPP is a design document: it describes a change, explains why it is needed, and records how the community reached its decision.
 
-Welcome to the heart of innovation for the Decentralized Intelligence Network (DIN)! Here, the DIN community comes together to shape the future of our network. **DIN Protocol Proposals (DPPs)** are the key to driving progress, proposing new features, and suggesting improvements to the DIN protocol.
+The process is modelled on Ethereum's Improvement Proposals ([EIP-1](https://eips.ethereum.org/EIPS/eip-1)).
 
-## What is a DPP?
+## How decisions are made
 
-A **DIN Protocol Proposal (DPP)** is your blueprint for enhancing the DIN ecosystem. It’s a design document that details new features or changes to the DIN protocol, offering a clear technical specification and the rationale behind the proposal. Think of DPPs as the guiding documents for DIN’s evolution, akin to Ethereum’s EIPs.
+DIN is governed by social consensus, not coin voting.
 
-**Note:** At DIN, we don’t use coin voting for decision-making. Instead, we champion a democratic, community-driven approach to ensure every voice is heard and valued.
+- **Discussion comes first.** Most proposals are settled in the open: people raise concerns, the author revises, and the proposal moves forward once no substantive objections remain. This is rough consensus, not unanimity.
+- **Voting is a last resort.** A vote is held only when there is a dispute, or a question that can't be settled by discussion. How disputes are settled, and who takes part, is being defined in DPP-1.
+- **Tokens don't buy control of the rules.** Holding tokens gives no say over protocol rules. Validators, who have stake at risk, may have a stake-weighted say in disputes over network economics, as proposed in DPP-1.
+- **Anyone can take part.** You don't need permission, tokens or a title to propose or comment.
+- **Exit is always possible.** All DIN code is open source. If the community rejects a direction, anyone can fork.
 
-## Explore DPP Categories
+Editors don't judge whether a proposal is a good idea. They check that it is complete, clearly written and follows this process.
 
-DPPs are organized into distinct categories based on their impact and purpose:
+When a discussion needs wider or more structured input, we may use tools such as [Polis](https://pol.is/home), which maps where people agree and disagree, or [gov4git](https://github.com/gov4git/gov4git), which records votes transparently in Git. These are options, not requirements.
 
-- **🔧 Core DPPs:**  
-  Dive into proposals that reshape the core of DIN, from tweaking consensus mechanisms to enhancing security protocols and privacy-preserving techniques.
+## Categories
 
-- **🔗 Interface DPPs:**  
-  Discover standards for seamless interactions within the DIN ecosystem. These proposals cover everything from data exchange protocols to APIs and communication norms between nodes.
+| Category | Covers |
+| :--- | :--- |
+| **Core** | Protocol rules: smart contracts, training rounds, scoring, slashing, rewards, and security and privacy mechanisms |
+| **Interface** | Standards for working with DIN: CLI and SDK behaviour, APIs, data formats, model packaging and node communication |
+| **Economics** | Network economic parameters: fees, emissions, stake requirements, reward splits and penalties |
+| **Meta** | How DIN is governed and run: this process, governance, the treasury and the Foundation |
+| **Informational** | Guidelines, research and best practice that don't change the protocol |
 
-- **📘 Informational DPPs:**  
-  Get valuable insights and recommendations with our informational DPPs. These provide guidelines, best practices, and non-technical advice that support and enrich the DIN ecosystem without altering the core protocol.
+Core and Interface DPPs need a reference implementation before they can become Final.
 
-## Governance and Community Participation
+## Lifecycle
 
-In the spirit of digital democracy, DIN leverages tools like **gov4git** and **Polis** to empower community members and developers:
+```
+Idea → Draft → Review → Last Call → Final
+```
 
-- **gov4git:**  
-  Contributions to the DIN ecosystem are rewarded indefinitely based on participation in **gov4git**. Tokens earned through contributions can be allocated according to DPP proposals, and community members can engage in **quadratic voting** to prioritize the importance of these proposals. The most critical proposals will be highlighted to steer community and developer focus. For more details and to get involved, visit [gov4git on GitHub](https://github.com/gov4git/gov4git.git).
+| Status | Meaning |
+| :--- | :--- |
+| **Idea** | Not yet a DPP. Discuss it first in [DevNet Discussions](https://github.com/InfiniteZeroFoundation/DevNet/discussions) or on [Telegram](https://t.me/+h46VS3AnO384ZGI8) to test interest and find collaborators. |
+| **Draft** | Merged into this repository and open for discussion and changes. |
+| **Review** | The author considers it ready and asks for wider review. |
+| **Last Call** | The final review window, normally 14 days. A substantive objection sends it back to Review. |
+| **Final** | Agreed. Only corrections are made after this point. |
+| **Living** | Kept up to date indefinitely, such as a process document. |
+| **Stagnant** | No activity for 6 months while in Draft or Review. The author, or anyone else, can revive it. |
+| **Withdrawn** | Withdrawn by the author. The number is not reused. |
+| **Rejected** | The community decided not to proceed. The reasons are recorded in the DPP. |
 
+A Final DPP is an agreement, not a deployment. Changes reach the network through the normal release process in [DevNet](https://github.com/InfiniteZeroFoundation/DevNet).
 
-- **POLIS:**  
-  Contributions to the DIN ecosystem are supported through **POLIS**, a platform for collective decision-making. Engage with POLIS to participate in decentralized governance and help shape the future of the network. Tokens earned through contributions can be allocated according to community proposals, and you can use **quadratic voting** to emphasize the importance of these proposals. To explore POLIS and get involved, visit [POLIS on GitHub](https://github.com/compdemocracy/) and [POLIS website](https://pol.is/home).
+## How to submit a DPP
 
-The DIN community is committed to an experimental and evolving governance process that reflects the values of digital democracy. Everyone is encouraged to participate in shaping the future of the protocol.
+1. **Discuss the idea first** in [DevNet Discussions](https://github.com/InfiniteZeroFoundation/DevNet/discussions) or on [Telegram](https://t.me/+h46VS3AnO384ZGI8).
+2. **Open a discussion issue** in this repository titled `DPP discussion: <title>`. The conversation about your proposal lives there.
+3. **Write your DPP** using the template below, in a file named `DPP-<number>.md`. Use the next free number in the [DPP Index](./DPP-Index.md); an editor confirms it during review.
+4. **Open a pull request** that adds your DPP and its row in the DPP Index. If you aren't a maintainer, fork this repository first.
+5. **An editor checks it and merges it as Draft.** Discussion continues on the issue.
+6. **Move it forward.** When it is ready, open a pull request that updates its status.
 
-## 🌟 DPP Lifecycle
+## Roles
 
-1. **Draft:**  
-   A new DPP begins its journey as a draft. Here, the proposal is open for community input and revisions to refine its ideas.
+- **Authors** write the DPP, gather feedback, keep it up to date, and record the objections raised and how they were resolved.
+- **Editors** check format and completeness, confirm numbers, and merge status changes. They don't decide on merit. Until community editors are appointed, the core maintainers act as editors.
+- **The community** is anyone who reads, comments on, tests or reviews a proposal.
 
-2. **Review:**  
-   Once polished, the draft moves into the review stage. It undergoes a thorough evaluation by the DIN community and maintainers to ensure its quality and relevance.
-
-3. **Final:**  
-   After a successful review and approval, the DPP is marked as final. It’s then implemented or adopted as a key component of the DIN protocol.
-
-4. **Rejection/Withdrawal:**  
-   If a DPP doesn’t meet our standards or if the community opts not to proceed, it may be rejected. Authors can also withdraw a DPP at any point before it becomes final.
-
-## 🚀 How to Contribute
-
-Get involved in shaping the future of the DIN protocol by submitting your own DPPs! Here’s how you can make your mark:
-
-1. **Fork this Repository:**  
-   Create your own copy by forking this repository to start drafting your DPP.
-
-2. **Create a New DPP File:**  
-   Draft your proposal in a new markdown file. Follow the structure of existing DPPs to maintain consistency.
-
-3. **Submit a Pull Request (PR):**  
-   When your DPP is ready, submit a pull request. Your proposal will be reviewed and discussed by the community.
-
-4. **Engage in Discussions:**  
-   Join the conversations about your DPP. Community feedback is vital for refining and enhancing proposals.
-
-## 🔢 DPP Numbering
-
-Each DPP is assigned a unique number (e.g., DPP-1, DPP-2) for easy tracking and reference. Check out the [DPP Index](./DPP-Index.md) for a comprehensive list of all proposals.
-
-## 📝 DPP Template
-
-For consistency, please use the following template when drafting your DPP:
+## DPP template
 
 ```markdown
-# DPP-<Number>: <Title>
+# DPP-<number>: <Title>
 
-**Authors:** <Your Name>  
-**Status:** Draft / Review / Final / Rejected / Withdrawn  
-**Category:** Core / Interface / Informational  
-**Created:** YYYY-MM-DD
-
-## Summary
-
-A brief overview of the proposal.
+| | |
+| :--- | :--- |
+| **Description** | One sentence on what this proposes |
+| **Authors** | Name (@github-handle) |
+| **Discussions-To** | Link to the discussion issue |
+| **Status** | Draft |
+| **Category** | Core / Interface / Economics / Meta / Informational |
+| **Created** | YYYY-MM-DD |
+| **Requires** | (Optional) Numbers of DPPs this depends on |
 
 ## Abstract
 
-A detailed description of the proposal, including the problem it addresses and the proposed solution.
+A short summary of the proposal, in about 200 words.
 
 ## Motivation
 
-Why is this proposal important? What problem does it solve or what improvements does it bring?
+The problem this solves, and why it matters now.
 
 ## Specification
 
-A technical description of the proposed changes or new features. Include as much detail as needed.
+Exactly what changes. For Core and Interface DPPs, enough detail for someone to implement it.
 
 ## Rationale
 
-Explain the reasoning behind the design decisions made in this proposal.
+Why this design, which alternatives were considered, and which objections were raised and how they were resolved.
 
 ## Backwards Compatibility
 
-Discuss how this proposal affects compatibility with previous versions of the DIN protocol.
+What this changes for existing participants, contracts and tools, and how to migrate. Write "None" if nothing changes.
 
-## Implementation
+## Security Considerations
 
-(Optional) Details on how the proposal could be implemented, if applicable.
+The risks this introduces or removes: attacks, failure modes, privacy and economic manipulation. Required for every DPP.
+
+## Reference Implementation
+
+(Optional while in Draft; required before Final for Core and Interface DPPs.) Links to code, pull requests or tests.
 
 ## References
 
-(Optional) Include any related documents, research, or other DPPs.
+(Optional) Related DPPs, research and documents.
+```
 
-# Conclusion
+## Get involved
 
-DIN Protocol Proposals (DPPs) are at the core of collaborative development within the DIN ecosystem. We encourage everyone in the community to get involved, share ideas, and help shape the future of decentralized intelligence.
+- [DPP Index](./DPP-Index.md): every proposal and its status
+- [DevNet](https://github.com/InfiniteZeroFoundation/DevNet): the protocol's code
+- [DevNet Discussions](https://github.com/InfiniteZeroFoundation/DevNet/discussions): ideas and questions
+- [White Paper](https://github.com/InfiniteZeroFoundation/White-Paper)
+- [Telegram](https://t.me/+h46VS3AnO384ZGI8)
 
-This process is designed to be open and community-driven, reflecting our commitment to innovation and collaboration. If you have any questions or need help, don’t hesitate to open an issue or reach out to the maintainers.
-
-Happy proposing!
+Questions about the process? [Open an issue](https://github.com/InfiniteZeroFoundation/DIN-Protocol-Proposals-DPP/issues).

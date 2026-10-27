@@ -1,10 +1,10 @@
-# DPP-1: Non-Coin Governance and a Constitutionally Constrained Foundation Treasury
+# IZP-1: Non-Coin Governance and a Constitutionally Constrained Foundation Treasury
 
 | | |
 | :--- | :--- |
-| **Description** | How DIN makes decisions, settles disputes, controls upgrades and spends its treasury |
+| **Description** | How InfiniteZero makes decisions, settles disputes, controls upgrades and spends its treasury |
 | **Authors** | Abraham Nash (@abrahamnash) |
-| **Discussions-To** | [link to the DPP-1 discussion issue] |
+| **Discussions-To** | https://github.com/InfiniteZeroFoundation/IZPs/issues/1 |
 | **Status** | Draft |
 | **Category** | Meta |
 | **Created** | 2026-10-27 |
@@ -13,10 +13,10 @@
 
 Today, InfiniteZero's decisions are made in the open by the core team, and on-chain community governance is planned for after mainnet. Before then, the project needs a clear direction for who decides what.
 
-This DPP proposes separating five concerns:
+This IZP proposes separating five concerns:
 
-1. **Protocol rules** → social consensus through the DPP process, with no token vote
-2. **Network economics** → social consensus, with stake-weighted voting by DIN validators only to settle disputes
+1. **Protocol rules** → social consensus through the IZP process, with no token vote
+2. **Network economics** → social consensus, with stake-weighted voting by InfiniteZero validators only to settle disputes
 3. **Contract upgrades** → carried out by key holders, only for changes social consensus has agreed, with forking as the backstop
 4. **Treasury spending** → a future legal Foundation, bound by its charter and founding principles
 5. **Fee rate** → set by the community, not the Foundation
@@ -42,7 +42,7 @@ How this proposal maps to InfiniteZero's principles:
 | :--- | :--- |
 | Built on Ethereum | Inherits Ethereum's social-consensus model for protocol rules |
 | Secured by validators | Staked, slashable validators verify the work, and settle disputes over network economics |
-| Governed by the community | Decisions by open discussion through DPPs; fee rate set by the community |
+| Governed by the community | Decisions by open discussion through IZPs; fee rate set by the community |
 | Models belong to the commons | The treasury funds development; models are public goods |
 | Applications benefit | Shared models they can use, and possibly a share of fees |
 | Foundation | A legally constrained steward, not the protocol's owner |
@@ -51,7 +51,7 @@ How this proposal maps to InfiniteZero's principles:
 
 | Layer | Responsibility | How it is decided |
 | :--- | :--- | :--- |
-| Protocol rules | Upgrades, standards, direction | Social consensus through DPPs |
+| Protocol rules | Upgrades, standards, direction | Social consensus through IZPs |
 | Network economics | Economic parameters that affect validators | Social consensus; disputes settled by stake-weighted validator vote |
 | Contract upgrades | Carrying out agreed changes on-chain | Key holders (multisig with a time delay), only for agreed changes; forking as the backstop |
 | Treasury spending | Deploying accumulated funds | Foundation, within its charter; major spending signed off by two chambers |
@@ -59,28 +59,28 @@ How this proposal maps to InfiniteZero's principles:
 
 ### 1. Discussion first, voting as a last resort
 
-- Every decision starts as open discussion, usually through a DPP.
+- Every decision starts as open discussion, usually through an IZP.
 - A proposal moves forward once no substantive objections remain (rough consensus, not unanimity).
 - A vote is held only when there is a dispute, or a question that can't be settled by discussion.
 - Who votes depends on what is disputed, as set out below.
 
 ### 2. Protocol rules → social consensus
 
-- Anyone can propose a change through a DPP.
+- Anyone can propose a change through an IZP.
 - Developers, researchers, validators, node operators, model owners, applications and users discuss it.
 - There is no token vote on protocol rules.
-- In the long term, multiple independent client implementations (today there is one, `dincli`), so no single team controls the software.
+- In the long term, multiple independent client implementations (today there is one, `dincli`, which is being renamed `inz`), so no single team controls the software.
 
 ### 3. Network economics → social consensus, validators settle disputes
 
-- DIN runs on Ethereum (today on Optimism), so block consensus is handled there.
-- DIN's validators (auditors and aggregators) stake to verify training work and are slashed for misbehaviour, so they are directly exposed to the network's economics.
-- Economic changes are agreed through discussion like any other DPP. If a dispute can't be settled, validators vote, weighted by stake.
+- InfiniteZero runs on Ethereum (today on Optimism), so block consensus is handled there.
+- InfiniteZero's validators (auditors and aggregators) stake to verify training work and are slashed for misbehaviour, so they are directly exposed to the network's economics.
+- Economic changes are agreed through discussion like any other IZP. If a dispute can't be settled, validators vote, weighted by stake.
 
 ### 4. Contract upgrades → directed by social consensus
 
-- DIN's contracts are upgradeable, so whoever holds the upgrade keys can change them.
-- Upgrades are carried out by a multisig with a time delay, and only for changes that social consensus has agreed through the DPP process.
+- InfiniteZero's contracts are upgradeable, so whoever holds the upgrade keys can change them.
+- Upgrades are carried out by a multisig with a time delay, and only for changes that social consensus has agreed through the IZP process.
 - The contracts are open source. If key holders refuse an agreed change, or push one the community rejects, anyone can fork and redeploy.
 
 ### 5. Treasury spending → two chambers
@@ -122,7 +122,7 @@ The Foundation is a future legal entity, still to be set up. Its charter should 
 ## Rationale
 
 - **Discussion before voting.** Votes count preferences; discussion improves proposals. Settling most decisions socially, and voting only on genuine disputes, keeps decisions well reasoned and stops governance from becoming a contest of numbers.
-- **Social consensus for rules.** Following Ethereum, rule changes should not be bought. Open discussion through DPPs, with forking as the final check, keeps the protocol accountable to the people who use it.
+- **Social consensus for rules.** Following Ethereum, rule changes should not be bought. Open discussion through IZPs, with forking as the final check, keeps the protocol accountable to the people who use it.
 - **Validators settle economic disputes.** Validators bear the cost of bad economic parameters through their stake, so they should have the deciding say when economics can't be agreed. Limiting their vote to economic disputes stops stake from becoming control over the protocol's rules or treasury.
 - **A Foundation bound by founding principles.** Fees routed to the Foundation fund development and the ecosystem. The principles may be subjective, but written founding articles give lasting guidance and guard against the project drifting from a reasonable set of principles because of any one person's interpretation.
 - **Separating fee-setting from fee-spending.** If the Foundation could set its own revenue rate, it would have a reason to raise fees. Letting the community set the rate removes that conflict.
@@ -130,9 +130,9 @@ The Foundation is a future legal entity, still to be set up. Its charter should 
 
 ## Backwards Compatibility
 
-Nothing changes for deployed contracts or current participants. Today, the deployer key controls contract upgrades and the core team makes decisions in the open. This DPP sets the direction for moving away from that, starting with putting upgrade keys behind a multisig with a time delay.
+Nothing changes for deployed contracts or current participants. Today, the deployer key controls contract upgrades and the core team makes decisions in the open. This IZP sets the direction for moving away from that, starting with putting upgrade keys behind a multisig with a time delay.
 
-Stake-weighted validator voting is limited to disputes over network economics. It does not change the principle that DIN does not use coin voting for protocol decisions.
+Stake-weighted validator voting is limited to disputes over network economics. It does not change the principle that InfiniteZero does not use coin voting for protocol decisions.
 
 The on-chain fee router already sends a capped share of fees (at most 20%) to a treasury, alongside the validator pool, storage and public goods. Under this proposal, the Foundation would become the steward of that treasury.
 
@@ -160,9 +160,9 @@ The on-chain fee router already sends a capped share of fees (at most 20%) to a 
 
 ## Next Steps
 
-1. Discuss this DPP on its discussion issue.
+1. Discuss this IZP on its discussion issue.
 2. Draft the founding principles and a constitutional charter for the Foundation.
-3. Define how disputes are raised and how votes are run, as a follow-up DPP.
+3. Define how disputes are raised and how votes are run, as a follow-up IZP.
 4. Move contract upgrade keys to a multisig with a time delay.
 5. Implement an on-chain treasury with multisig control, time delays and transparent accounting.
 6. Keep fee-setting separate from fee-spending in the protocol's economic design.
